@@ -1,0 +1,277 @@
+/* Main Styles for Walletis FinTech Application */
+
+/* View Transitions */
+@view-transition { 
+  navigation: auto; 
+}
+
+html { 
+  background-color: var(--bg); 
+}
+
+/* * {
+  outline: 1px solid rgba(255,0,0,0.3);
+} */
+
+::view-transition-old(main-nav), ::view-transition-new(main-nav) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(main-content) {
+  animation: 0.25s ease-out both fade-out;
+}
+
+::view-transition-new(main-content) {
+  animation: 0.25s ease-in 0.1s both fade-in;
+}
+
+/* CSS Variables */
+:root {
+  --bg: #FAFAFA;
+  --text-primary: #1F2937;
+  --text-secondary: #6B7280;
+  --border: #E5E7EB;
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --card-bg: #FFFFFF;
+  --brand-primary: #201355;
+  --brand-emerald: #5943af;
+  --brand-emerald-light: #2d1a7a;
+  --brand-emerald-dark: #150d3d;
+}
+
+.dark {
+  --bg: #050505;
+  --text-primary: #F9FAFB;
+  --text-secondary: #D1D5DB;
+  --border: #374151;
+  --nav-bg: rgba(5, 5, 5, 0.8);
+  --card-bg: #111111;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Background Patterns */
+.bg-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgba(203, 201, 207, 0.105) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.bg-brand-emerald {
+  background-color: var(--brand-emerald) !important;
+}
+.bg-brand-emerald\/5 {
+  background-color: color-mix(in oklab, var(--brand-emerald) 5%, transparent) !important;
+}
+.bg-brand-emerald\/20 {
+  background-color: color-mix(in oklab, var(--brand-emerald) 20%, transparent) !important;
+}
+.text-brand-emerald {
+  color: var(--brand-emerald) !important;
+}
+
+/* Navigation hover states */
+.hover\:text-brand-emerald:hover {
+  color: #9884e7 !important;
+}
+.hover\:shadow-emerald-glow:hover {
+  box-shadow: 0 0 20px rgba(189, 172, 255, 0.781) !important;
+}
+.hover\:bg-brand-emerald\/5:hover {
+  background-color: color-mix(in oklab, var(--brand-emerald) 5%, transparent) !important;
+}
+
+.text-brand-emerald\/20 {
+  color: color-mix(in oklab, var(--brand-emerald) 20%, transparent) !important;
+}
+
+.border-brand-emerald {
+  border-color: color-mix(in oklab, var(--brand-emerald) 20%, transparent);
+}
+
+.bg-brand-emerald\/10 {
+  background-color: rgba(62, 23, 187, 0.1) !important;
+}
+.border-brand-emerald\/20 {
+  border-color: rgb(55 16 185 / 20%) !important;
+}
+
+.bg-emerald-50 {
+  background-color: rgba(62, 23, 187, 0.1) !important;
+}
+
+.to-emerald-700 {
+  background-image: linear-gradient(to bottom, var(--brand-emerald), var(--brand-emerald-dark)) !important;
+}
+
+.from-brand-emerald {
+  background-image: linear-gradient(to bottom, var(--brand-emerald), var(--brand-emerald-light)) !important;
+}
+.from-brand-emerald\/20 {
+  background-image: linear-gradient(to top, color-mix(in oklab, var(--brand-emerald) 20%, transparent), transparent) !important;
+}
+
+.border-brand-emerald {
+  border-color: var(--brand-emerald) !important;
+}
+.border-brand-emerald\/10 {
+  border-color: color-mix(in oklab, var(--brand-emerald) 10%, transparent) !important;
+}
+.border-l-4.border-brand-emerald {
+  border-left-color: var(--brand-emerald) !important;
+  border-left-width: 4px !important;
+}
+
+.group-hover\:text-brand-emerald {
+  .group:hover & {
+    color: var(--brand-emerald) !important;
+  }
+}
+
+/* Scroll Progress */
+.scroll-progress {
+  view-transition-name: progress-bar;
+  transform-origin: 0 50%;
+  animation: scroll-progress auto linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* Animations */
+.floating {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+.reveal-scroll {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Animations */
+.stagger-1 { transition-delay: 100ms; }
+.stagger-2 { transition-delay: 200ms; }
+.stagger-3 { transition-delay: 300ms; }
+.stagger-4 { transition-delay: 400ms; }
+
+/* Line Animations */
+.emerald-line-connector {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear infinite;
+}
+
+@keyframes dash {
+  to { stroke-dashoffset: 0; }
+}
+
+/* Card Styles */
+.premium-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  border-color: #a393e287;
+}
+
+/* Pulse Effects */
+.pulse-emerald {
+  animation: pulse-emerald 2s infinite;
+}
+
+@keyframes pulse-emerald {
+  0% { box-shadow: 0 0 0 0 #3510c856; }
+  70% { box-shadow: 0 0 20px rgba(32, 19, 85, 0.3) !important; }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.shadow-emerald-glow {
+  box-shadow: 0 0 20px rgba(32, 19, 85, 0.3) !important;
+}
+
+/* Carousel */
+.carousel-track {
+  display: flex;
+  animation: carousel 30s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes carousel {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Language Toggle Styles */
+.lang-en { display: none; }
+[data-lang="en"] .lang-fr { display: none; }
+[data-lang="en"] .lang-en { display: inline; }
+[data-lang="en"] div.lang-en, [data-lang="en"] section.lang-en { display: block; }
+
+.lang-btn.active {
+  color: #201355;
+  opacity: 1;
+}
+
+/* Navigation */
+.nav-blur {
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Form Styles */
+.form-input {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #201355;
+}
+
+/* Gold Card Styles */
+.gold-card-bg {
+  background: linear-gradient(135deg, #201355 0%, #3014a1 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-card-bg::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}

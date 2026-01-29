@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walletis | Contact - Support</title>
+  <meta name="view-transition" content="same-origin">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              emerald: '#10B981',
+            }
+          },
+          fontFamily: {
+            serif: ['Newsreader', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['Space Grotesk', 'monospace']
+          },
+          boxShadow: {
+            'premium': '0 4px 12px rgba(0,0,0,0.04), 0 12px 24px rgba(0,0,0,0.06)',
+            'emerald-glow': '0 0 20px rgba(16, 185, 129, 0.3)'
+          },
+          transitionTimingFunction: {
+            'premium': 'cubic-bezier(0.16, 1, 0.3, 1)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body data-lang="fr">
+  <div id="root" class="min-h-screen font-sans overflow-hidden selection:bg-brand-emerald/20 bg-grid">
+    
+    <!-- Announcement Banner -->
+    <div class="fixed top-0 left-0 w-full z-[60] bg-brand-emerald text-white py-2 px-6 text-center text-xs font-medium">
+      <span class="lang-fr"><b>Offre Spéciale:</b> Ouvrez votre compte Walletis et recevez 10% de bonus sur votre premier dépôt!</span>
+      <span class="lang-en"><b>Special Offer:</b> Open your Walletis account and get 10% bonus on your first deposit!</span>
+    </div>
+    
+    <!-- Scroll Progress -->
+    <div class="fixed left-0 w-full h-1 bg-brand-emerald/10 z-[50]">
+      <div class="scroll-progress h-full bg-brand-emerald"></div>
+    </div>
+
+    <!-- Persistent Navigation -->
+    <nav style="view-transition-name: main-nav" class="fixed left-0 w-full h-20 z-50 nav-blur flex items-center justify-between px-6 md:px-16 transition-all duration-400">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-brand-emerald flex items-center justify-center text-white shadow-emerald-glow">
+          <iconify-icon icon="lucide:wallet-cards" class="text-xl"></iconify-icon>
+        </div>
+        <span class="font-serif text-2xl font-bold tracking-tight">Walletis</span>
+      </div>
+
+      <div class="hidden lg:flex items-center gap-10 font-sans text-[11px] font-bold tracking-[0.1em] uppercase">
+        <a href="index.html" id="nav-home-link" class="hover:text-brand-emerald transition-colors duration-400">
+          <span class="lang-fr">Accueil</span>
+          <span class="lang-en">Home</span>
+        </a>
+        <a href="about.html" id="nav-about-link" class="hover:text-brand-emerald transition-colors duration-400">
+          <span class="lang-fr">À Propos</span>
+          <span class="lang-en">About</span>
+        </a>
+        
+        <div class="group relative cursor-pointer">
+          <span class="flex items-center gap-1 transition-colors duration-400" style="padding-bottom: 20px; padding-top: 20px;">
+            Services <iconify-icon icon="lucide:chevron-down" class="text-xs"></iconify-icon>
+          </span>
+          <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 w-[70vw] bg-white dark:bg-zinc-900 p-8 opacity-0 translate-y-4 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-500 shadow-premium rounded-3xl border border-brand-emerald/10" style="margin-top: -5px;">
+            <div class="grid grid-cols-4 gap-6">
+              <!-- Gold One Plus Section -->
+              <div class="space-y-4">
+                <h6 class="text-xs font-black tracking-widest uppercase text-brand-emerald mb-4">Gold One Plus</h6>
+                <a href="cards.html" class="group/item flex gap-3 items-start p-3 rounded-xl hover:bg-brand-emerald/5 transition-colors">
+                  <div class="w-8 h-8 rounded-lg text-brand-emerald flex items-center justify-center group-hover/item:scale-110 transition-transform flex-shrink-0">
+                    <iconify-icon icon="lucide:credit-card" class="text-lg"></iconify-icon>
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-xs font-bold mb-1">Carte Virtuelle</p>
+                    <p class="text-[9px] text-zinc-500 leading-relaxed">Secure online payments</p>
+                  </div>
+                </a>
+                <a href="cards.html" class="group/item flex gap-3 items-start p-3 rounded-xl hover:bg-brand-emerald/5 transition-colors">
+                  <div class="w-8 h-8 rounded-lg text-brand-emerald flex items-center justify-center group-hover/item:scale-110 transition-transform flex-shrink-0">
+                    <iconify-icon icon="lucide:scan" class="text-lg"></iconify-icon>
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-xs font-bold mb-1">TeroCards</p>
+                    <p class="text-[9px] text-zinc-500 leading-relaxed">Scan & drop system</p>
+                  </div>
+                </a>
+              </div>
+              
+              <!-- MyWallets Section -->
+              <div class="space-y-4">
+                <h6 class="text-xs font-black tracking-widest uppercase text-brand-emerald mb-4">MyWallets</h6>
+                <a href="wallets.html" class="group/item flex gap-3 items-start p-3 rounded-xl hover:bg-brand-emerald/5 transition-colors">
+                  <div class="w-8 h-8 rounded-lg text-blue-500 flex items-center justify-center group-hover/item:scale-110 transition-transform flex-shrink-0">
+                    <iconify-icon icon="lucide:wallet" class="text-lg"></iconify-icon>
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-xs font-bold mb-1">Multi-Devises</p>
+                    <p class="text-[9px] text-zinc-500 leading-relaxed">CDF, USD, EUR accounts</p>
+                  </div>
+                </a>
+                <a href="wallets.html" class="group/item flex gap-3 items-start p-3 rounded-xl hover:bg-brand-emerald/5 transition-colors">
+                  <div class="w-8 h-8 rounded-lg text-blue-500 flex items-center justify-center group-hover/item:scale-110 transition-transform flex-shrink-0">
+                    <iconify-icon icon="lucide:activity" class="text-lg"></iconify-icon>
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-xs font-bold mb-1">CheckWallets</p>
+                    <p class="text-[9px] text-zinc-500 leading-relaxed">Real-time tracking</p>
+                  </div>
+                </a>
+              </div>
+              
+              <!-- Payments Section -->
+              <div class="space-y-4">
+                <h6 class="text-xs font-black tracking-widest uppercase text-brand-emerald mb-4">Paiements</h6>
+                <a href="#" class="group/item flex gap-3 items-start p-3 rounded-xl hover:bg-brand-emerald/5 transition-colors">
+                  <div class="w-8 h-8 rounded-lg text-purple-500 flex items-center justify-center group-hover/item:scale-110 transition-transform flex-shrink-0">
+                    <iconify-icon icon="lucide:zap" class="text-lg"></iconify-icon>
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-xs font-bold mb-1">Factures</p>
+                    <p class="text-[9px] text-zinc-500 leading-relaxed">Electricity, Canal+</p>
+                  </div>
+                </a>
+                <a href="#" class="group/item flex gap-3 items-start p-3 rounded-xl hover:bg-brand-emerald/5 transition-colors">
+                  <div class="w-8 h-8 rounded-lg text-purple-500 flex items-center justify-center group-hover/item:scale-110 transition-transform flex-shrink-0">
+                    <iconify-icon icon="lucide:graduation-cap" class="text-lg"></iconify-icon>
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-xs font-bold mb-1">Éducation</p>
+                    <p class="text-[9px] text-zinc-500 leading-relaxed">School fees</p>
+                  </div>
+                </a>
+              </div>
+              
+              <!-- Top-up & Forex Section -->
+              <div class="space-y-4">
+                <h6 class="text-xs font-black tracking-widest uppercase text-brand-emerald mb-4">Recharge</h6>
+                <a href="#" class="group/item flex gap-3 items-start p-3 rounded-xl hover:bg-brand-emerald/5 transition-colors">
+                  <div class="w-8 h-8 rounded-lg text-orange-500 flex items-center justify-center group-hover/item:scale-110 transition-transform flex-shrink-0">
+                    <iconify-icon icon="lucide:smartphone" class="text-lg"></iconify-icon>
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-xs font-bold mb-1">Mobile Money</p>
+                    <p class="text-[9px] text-zinc-500 leading-relaxed">Airtel, Orange</p>
+                  </div>
+                </a>
+                <a href="#" class="group/item flex gap-3 items-start p-3 rounded-xl hover:bg-brand-emerald/5 transition-colors">
+                  <div class="w-8 h-8 rounded-lg text-green-500 flex items-center justify-center group-hover/item:scale-110 transition-transform flex-shrink-0">
+                    <iconify-icon icon="lucide:refresh-cw" class="text-lg"></iconify-icon>
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-xs font-bold mb-1">Forex Instant</p>
+                    <p class="text-[9px] text-zinc-500 leading-relaxed">Best rates</p>
+                  </div>
+                </a>
+                <a href="#" class="group/item flex gap-3 items-start p-3 rounded-xl hover:bg-brand-emerald/5 transition-colors">
+                  <div class="w-8 h-8 rounded-lg  text-yellow-500 flex items-center justify-center group-hover/item:scale-110 transition-transform flex-shrink-0">
+                    <iconify-icon icon="lucide:gift" class="text-lg"></iconify-icon>
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-xs font-bold mb-1">Rewards</p>
+                    <p class="text-[9px] text-zinc-500 leading-relaxed">Cashback</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="contact.html" id="nav-contact-link" class="text-brand-emerald transition-colors duration-400">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-4 lg:gap-8">
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 rounded-full flex items-center justify-center bg-zinc-100 dark:bg-zinc-800 hover:bg-brand-emerald/10 transition-colors group">
+          <iconify-icon icon="lucide:menu" class="text-lg group-hover:scale-110 transition-transform"></iconify-icon>
+        </button>
+        
+        <div class="flex items-center gap-4 border-r border-zinc-200 dark:border-zinc-800 pr-4">
+          <div class="flex items-center gap-2">
+            <button id="lang-fr-btn" class="lang-btn active text-[11px] font-black transition-all hover:text-brand-emerald" onclick="setLang('fr')">FR</button>
+            <span class="text-[10px] opacity-20">/</span>
+            <button id="lang-en-btn" class="lang-btn opacity-40 text-[11px] font-black transition-all hover:text-brand-emerald" onclick="setLang('en')">EN</button>
+          </div>
+          <button id="theme-toggle" class="w-9 h-9 rounded-full flex items-center justify-center bg-zinc-100 dark:bg-zinc-800 hover:bg-brand-emerald/10 transition-colors group" aria-label="Toggle Theme">
+            <iconify-icon id="theme-icon" icon="lucide:moon" class="text-lg group-hover:scale-110 transition-transform"></iconify-icon>
+          </button>
+        </div>
+        <a href="#open-account" id="nav-cta-btn" class="hidden sm:flex px-6 py-3 bg-brand-emerald text-white rounded-full text-[11px] font-bold tracking-widest uppercase hover:shadow-emerald-glow transition-all duration-400 active:scale-95">
+          <span class="lang-fr">Ouvrir un compte</span><span class="lang-en">Open an account</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed left-0 w-full bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 lg:hidden hidden opacity-0 translate-y-4 transition-all duration-300 z-40">
+      <div class="px-6 py-4 space-y-4">
+        <a href="index.html" class="block py-2 text-sm font-bold hover:text-brand-emerald transition-colors">
+          <span class="lang-fr">Accueil</span>
+          <span class="lang-en">Home</span>
+        </a>
+        <a href="about.html" class="block py-2 text-sm font-bold hover:text-brand-emerald transition-colors">
+          <span class="lang-fr">À Propos</span>
+          <span class="lang-en">About</span>
+        </a>
+        <a href="cards.html" class="block py-2 text-sm font-bold hover:text-brand-emerald transition-colors">
+          <span class="lang-fr">Carte Virtuelle</span>
+          <span class="lang-en">Virtual Card</span>
+        </a>
+        <a href="wallets.html" class="block py-2 text-sm font-bold text-brand-emerald">
+          <span class="lang-fr">Multi-Wallets</span>
+          <span class="lang-en">Multi-Wallets</span>
+        </a>
+        <a href="contact.html" class="block py-2 text-sm font-bold hover:text-brand-emerald transition-colors">Contact</a>
+      </div>
+    </div>
+
+
+    <!-- Main Content (Dynamic) -->
+    <main style="view-transition-name: main-content" class="pt-40">
+      
+      <!-- Contact Hero -->
+      <section class="px-6 md:px-16 lg:px-24 mb-24">
+        <div class="max-w-7xl mx-auto flex flex-col items-center text-center reveal-scroll active">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-emerald/10 border border-brand-emerald/20 mb-8">
+            <span class="text-[10px] font-black text-brand-emerald tracking-[0.2em] uppercase">
+              <span class="lang-fr">Support Client</span>
+              <span class="lang-en">Customer Support</span>
+            </span>
+          </div>
+          <h1 class="font-serif text-5xl md:text-7xl leading-tight mb-8">
+            <span class="lang-fr">Parlons de votre <span class="italic font-normal text-brand-emerald">futur financier.</span></span>
+            <span class="lang-en">Let's talk about your <span class="italic font-normal text-brand-emerald">financial future.</span></span>
+          </h1>
+          <p class="text-lg md:text-xl opacity-60 max-w-2xl">
+            <span class="lang-fr">Notre équipe est à votre disposition pour toute question concernant nos services en RD Congo et à l'international.</span>
+            <span class="lang-en">Our team is at your disposal for any questions regarding our services in DR Congo and internationally.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Form & Info -->
+      <section class="px-6 md:px-16 lg:px-24 py-24 bg-zinc-50 dark:bg-zinc-900/40 border-y border-zinc-200 dark:border-zinc-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
+          
+          <!-- Left: Contact Details -->
+          <div class="space-y-12 reveal-scroll stagger-1 active">
+            <div class="space-y-4">
+              <h2 class="text-3xl font-serif">
+                <span class="lang-fr">Informations de contact</span>
+                <span class="lang-en">Contact Information</span>
+              </h2>
+              <p class="opacity-60">
+                <span class="lang-fr">Choisissez le canal qui vous convient le mieux pour nous joindre.</span>
+                <span class="lang-en">Choose the channel that suits you best to reach us.</span>
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="premium-card p-6 rounded-2xl">
+                <div class="w-10 h-10 rounded-lg bg-brand-emerald/10 text-brand-emerald flex items-center justify-center mb-6"><iconify-icon icon="lucide:mail" class="text-xl"></iconify-icon></div>
+                <p class="text-[10px] font-black uppercase tracking-widest opacity-40 mb-2">Email</p>
+                <p class="font-bold">hello@walletis.cd</p>
+                <p class="text-xs opacity-50">Support 24h/24</p>
+              </div>
+              
+              <div class="premium-card p-6 rounded-2xl">
+                <div class="w-10 h-10 rounded-lg bg-brand-emerald/10 text-brand-emerald flex items-center justify-center mb-6"><iconify-icon icon="lucide:phone" class="text-xl"></iconify-icon></div>
+                <p class="text-[10px] font-black uppercase tracking-widest opacity-40 mb-2">Phone</p>
+                <p class="font-bold">+243 81 000 0000</p>
+                <p class="text-xs opacity-50">WhatsApp & Call</p>
+              </div>
+
+              <div class="premium-card p-6 rounded-2xl col-span-1 md:col-span-2">
+                <div class="w-10 h-10 rounded-lg bg-brand-emerald/10 text-brand-emerald flex items-center justify-center mb-6"><iconify-icon icon="lucide:map-pin" class="text-xl"></iconify-icon></div>
+                <p class="text-[10px] font-black uppercase tracking-widest opacity-40 mb-2">Office</p>
+                <p class="font-bold">14 Boulevard du 30 Juin, Gombe</p>
+                <p class="text-xs opacity-50">Goma, République Démocratique du Congo</p>
+              </div>
+            </div>
+
+            <div class="premium-card p-8 rounded-2xl">
+               <h4 class="text-lg font-bold mb-4">
+                <span class="lang-fr">Heures d'ouverture</span>
+                <span class="lang-en">Business Hours</span>
+               </h4>
+               <ul class="space-y-3">
+                 <li class="flex justify-between text-sm border-b border-zinc-100 dark:border-zinc-800 pb-2"><span>Lundi - Vendredi</span><span class="font-bold">08:00 — 17:00</span></li>
+                 <li class="flex justify-between text-sm border-b border-zinc-100 dark:border-zinc-800 pb-2"><span>Samedi</span><span class="font-bold">09:00 — 13:00</span></li>
+                 <li class="flex justify-between text-sm opacity-50"><span>Dimanche</span><span>Fermé</span></li>
+               </ul>
+            </div>
+          </div>
+
+          <!-- Right: Contact Form -->
+          <div class="premium-card p-8 md:p-12 rounded-[2.5rem] shadow-premium reveal-scroll stagger-2 active">
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                  <label class="text-[11px] font-black uppercase tracking-widest opacity-50">
+                    <span class="lang-fr">Nom Complet</span>
+                    <span class="lang-en">Full Name</span>
+                  </label>
+                  <input type="text" class="form-input w-full p-4 rounded-xl text-sm" placeholder="Ex: Félix Tshisekedi">
+                </div>
+                <div class="space-y-2">
+                  <label class="text-[11px] font-black uppercase tracking-widest opacity-50">
+                    <span class="lang-fr">Email</span>
+                    <span class="lang-en">Email</span>
+                  </label>
+                  <input type="email" class="form-input w-full p-4 rounded-xl text-sm" placeholder="felix@example.cd">
+                </div>
+              </div>
+              
+              <div class="space-y-2">
+                <label class="text-[11px] font-black uppercase tracking-widest opacity-50">
+                  <span class="lang-fr">Sujet</span>
+                  <span class="lang-en">Subject</span>
+                </label>
+                <select class="form-input w-full p-4 rounded-xl text-sm appearance-none">
+                  <option value="support">Support Technique</option>
+                  <option value="card">Gold One Plus Card</option>
+                  <option value="partner">Partenariat Business</option>
+                  <option value="other">Autre demande</option>
+                </select>
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-[11px] font-black uppercase tracking-widest opacity-50">
+                  <span class="lang-fr">Message</span>
+                  <span class="lang-en">Message</span>
+                </label>
+                <textarea rows="5" class="form-input w-full p-4 rounded-xl text-sm resize-none" placeholder="Comment pouvons-nous vous aider ?"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-5 bg-brand-emerald text-white font-bold rounded-xl hover:shadow-emerald-glow hover:scale-[1.01] active:scale-[0.98] transition-all">
+                <span class="lang-fr">Envoyer le message</span>
+                <span class="lang-en">Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="py-32 px-6 md:px-16 lg:px-24">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-20 reveal-scroll">
+            <h2 class="font-serif text-4xl mb-4">
+              <span class="lang-fr">Questions Fréquentes</span>
+              <span class="lang-en">Common Questions</span>
+            </h2>
+            <p class="opacity-60">
+              <span class="lang-fr">Trouvez des réponses rapides aux questions les plus posées.</span>
+              <span class="lang-en">Find quick answers to the most frequently asked questions.</span>
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <div class="premium-card p-6 rounded-2xl cursor-pointer group">
+              <div class="flex justify-between items-center">
+                <h4 class="font-bold">
+                  <span class="lang-fr">Comment recharger mon compte Walletis ?</span>
+                  <span class="lang-en">How do I top up my Walletis account?</span>
+                </h4>
+                <iconify-icon icon="lucide:plus" class="text-zinc-400 group-hover:text-brand-emerald transition-colors"></iconify-icon>
+              </div>
+            </div>
+            <div class="premium-card p-6 rounded-2xl cursor-pointer group">
+              <div class="flex justify-between items-center">
+                <h4 class="font-bold">
+                  <span class="lang-fr">Quels sont les frais de la carte Gold One Plus ?</span>
+                  <span class="lang-en">What are the Gold One Plus card fees?</span>
+                </h4>
+                <iconify-icon icon="lucide:plus" class="text-zinc-400 group-hover:text-brand-emerald transition-colors"></iconify-icon>
+              </div>
+            </div>
+            <div class="premium-card p-6 rounded-2xl cursor-pointer group">
+              <div class="flex justify-between items-center">
+                <h4 class="font-bold">
+                  <span class="lang-fr">Le service est-il disponible en dehors de Goma ?</span>
+                  <span class="lang-en">Is the service available outside of Goma?</span>
+                </h4>
+                <iconify-icon icon="lucide:plus" class="text-zinc-400 group-hover:text-brand-emerald transition-colors"></iconify-icon>
+              </div>
+            </div>
+            <div class="premium-card p-6 rounded-2xl cursor-pointer group">
+              <div class="flex justify-between items-center">
+                <h4 class="font-bold">
+                  <span class="lang-fr">Comment puis-je obtenir ma carte Gold One Plus ?</span>
+                  <span class="lang-en">How can I get my Gold One Plus card?</span>
+                </h4>
+                <iconify-icon icon="lucide:plus" class="text-zinc-400 group-hover:text-brand-emerald transition-colors"></iconify-icon>
+              </div>
+            </div>
+            <div class="premium-card p-6 rounded-2xl cursor-pointer group">
+              <div class="flex justify-between items-center">
+                <h4 class="font-bold">
+                  <span class="lang-fr">Quelles sont les limites de transaction ?</span>
+                  <span class="lang-en">What are the transaction limits?</span>
+                </h4>
+                <iconify-icon icon="lucide:plus" class="text-zinc-400 group-hover:text-brand-emerald transition-colors"></iconify-icon>
+              </div>
+            </div>
+            <div class="premium-card p-6 rounded-2xl cursor-pointer group">
+              <div class="flex justify-between items-center">
+                <h4 class="font-bold">
+                  <span class="lang-fr">Walletis est-il sécurisé pour mes fonds ?</span>
+                  <span class="lang-en">Is Walletis secure for my funds?</span>
+                </h4>
+                <iconify-icon icon="lucide:plus" class="text-zinc-400 group-hover:text-brand-emerald transition-colors"></iconify-icon>
+              </div>
+            </div>
+            <div class="premium-card p-6 rounded-2xl cursor-pointer group">
+              <div class="flex justify-between items-center">
+                <h4 class="font-bold">
+                  <span class="lang-fr">Puis-je utiliser Walletis pour les achats internationaux ?</span>
+                  <span class="lang-en">Can I use Walletis for international purchases?</span>
+                </h4>
+                <iconify-icon icon="lucide:plus" class="text-zinc-400 group-hover:text-brand-emerald transition-colors"></iconify-icon>
+              </div>
+            </div>
+            <div class="premium-card p-6 rounded-2xl cursor-pointer group">
+              <div class="flex justify-between items-center">
+                <h4 class="font-bold">
+                  <span class="lang-fr">Comment contacter le support client ?</span>
+                  <span class="lang-en">How do I contact customer support?</span>
+                </h4>
+                <iconify-icon icon="lucide:plus" class="text-zinc-400 group-hover:text-brand-emerald transition-colors"></iconify-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer (Persistent) -->
+    <footer style="view-transition-name: footer-section" class="py-32 px-6 md:px-16 border-t border-zinc-200 dark:border-zinc-800 reveal-scroll active">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20">
+        <div class="space-y-10">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-emerald flex items-center justify-center text-white shadow-emerald-glow">
+              <iconify-icon icon="lucide:wallet-cards" class="text-xl"></iconify-icon>
+            </div>
+            <span class="font-serif text-2xl font-bold tracking-tight">Walletis</span>
+          </div>
+          <p class="opacity-60 leading-relaxed">
+            <span class="lang-fr">Walletis S.A. est l'institution de technologie financière leader en République Démocratique du Congo. Nous démocratisons l'accès aux paiements globaux.</span>
+            <span class="lang-en">Walletis S.A. is the leading financial technology institution in the Democratic Republic of Congo. We democratize access to global payments.</span>
+          </p>
+          <div class="flex gap-5">
+            <a href="#facebook" id="social-fb" class="w-12 h-12 rounded-2xl border border-zinc-200 dark:border-zinc-800 flex items-center justify-center hover:bg-brand-emerald hover:text-white transition-all"><iconify-icon icon="lucide:facebook" class="text-xl"></iconify-icon></a>
+            <a href="#twitter" id="social-tw" class="w-12 h-12 rounded-2xl border border-zinc-200 dark:border-zinc-800 flex items-center justify-center hover:bg-brand-emerald hover:text-white transition-all"><iconify-icon icon="lucide:twitter" class="text-xl"></iconify-icon></a>
+            <a href="#instagram" id="social-in" class="w-12 h-12 rounded-2xl border border-zinc-200 dark:border-zinc-800 flex items-center justify-center hover:bg-brand-emerald hover:text-white transition-all"><iconify-icon icon="lucide:instagram" class="text-xl"></iconify-icon></a>
+          </div>
+        </div>
+
+        <div class="space-y-8">
+          <p class="text-[11px] font-black tracking-[0.3em] uppercase opacity-40">
+            <span class="lang-fr">Plateforme</span>
+            <span class="lang-en">Platform</span>
+          </p>
+          <ul class="space-y-5 text-sm font-bold">
+            <li><a href="cards.html" id="ft-link-card" class="hover:text-brand-emerald transition-colors">Gold One Plus</a></li>
+            <li><a href="wallets.html" id="ft-link-wallets" class="hover:text-brand-emerald transition-colors">Multi-Wallets</a></li>
+            <li><a href="#currency-exchange" id="ft-link-fx" class="hover:text-brand-emerald transition-colors">
+              <span class="lang-fr">Change Devises</span>
+              <span class="lang-en">Currency Exchange</span>
+            </a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-8">
+          <p class="text-[11px] font-black tracking-[0.3em] uppercase opacity-40">
+            <span class="lang-fr">Société</span>
+            <span class="lang-en">Company</span>
+          </p>
+          <ul class="space-y-5 text-sm font-bold">
+            <li><a href="about.html" id="ft-link-about" class="hover:text-brand-emerald transition-colors">
+              <span class="lang-fr">Notre Vision</span>
+              <span class="lang-en">Our Vision</span>
+            </a></li>
+            <li><a href="#careers" id="ft-link-careers" class="flex items-center gap-2 hover:text-brand-emerald transition-colors">
+              <span class="lang-fr">Carrières</span>
+              <span class="lang-en">Careers</span>
+              <span class="px-2 py-0.5 bg-brand-emerald/10 text-[8px] rounded-full">HIRING</span>
+            </a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-8">
+          <p class="text-[11px] font-black tracking-[0.3em] uppercase opacity-40">Contact</p>
+          <div class="space-y-5 text-sm leading-relaxed">
+            <p class="font-bold">Goma, Gombe<br><span class="opacity-40 font-normal">14 Boulevard du 30 Juin</span></p>
+            <p class="font-bold">hello@walletis.cd<br><span class="opacity-40 font-normal text-xs">Support 24/7</span></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
